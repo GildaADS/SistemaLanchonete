@@ -1,0 +1,157 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+<head>
+<title>Lanchonete</title>
+<script language="JAVASCRIPT">
+<!--
+function calcula(){
+val1=1.10*QT1.value
+val2=0.45*QT2.value
+val3=2.33*QT3.value
+val4=5.20*QT4.value
+val5=0.71*QT5.value
+ST1.value=forma(val1)
+ST2.value=forma(val2)
+ST3.value=forma(val3)
+ST4.value=forma(val4)
+ST5.value=forma(val5)
+total.value=forma(val1+val2+val3+val4+val5)
+}
+function forma(num){
+reais=Math.floor(num)
+cents=Math.round((num-reais)*100)
+texto=reais+"."
+if(cents<10){
+texto=texto+"0"
+}
+texto=texto+cents
+return texto
+} 
+
+//-->
+</script>
+</head>
+
+<body>
+
+<p>&nbsp;</p>
+
+<table border="2" width="100%" bgcolor="#C0C0C0" bordercolor="#000080">
+  <tr>
+    <td width="100%" colspan="4"><p align="center"><big><big><big><strong>LANCHONETE TESTE</strong></big></big></big></td>
+  </tr>
+  <tr>
+    <td width="25%"><font color="#FF0000"><big><strong>PRODUTO</strong></big></font></td>
+    <td width="25%"><font color="#FF0000"><big><strong>PREÇO</strong></big></font></td>
+    <td width="25%"><font color="#FF0000"><big><strong>QUANTIDADE</strong></big></font></td>
+    <td width="25%"><font color="#FF0000"><big><strong>SUB-TOTAL</strong></big></font></td>
+  </tr>
+  <tr>
+    <td width="25%"><strong>Dogão Simples</strong></td>
+    <td width="25%"><strong>R$ 6,25</strong></td>
+    <td width="25%" align="right"><select name="QT1" size="1">
+      <option value="00">00</option>
+      <option value="01">01</option>
+      <option value="02">02</option>
+      <option value="03">03</option>
+      <option value="04">04</option>
+      <option value="05">05</option>
+      <option value="06">06</option>
+      <option value="07">07</option>
+      <option value="08">08</option>
+      <option value="09">09</option>
+      <option value="10">10</option>
+    </select></td>
+    <td width="25%"><strong><input type="text" name="ST1" size="20"></strong></td>
+  </tr>
+  <tr>
+    <td width="25%"><strong>Dogão Duplo</strong></td>
+    <td width="25%"><strong>R$ 6,75</strong></td>
+    <td width="25%" align="right"><select name="QT2" size="1">
+      <option value="00">00</option>
+      <option value="01">01</option>
+      <option value="02">02</option>
+      <option value="03">03</option>
+      <option value="04">04</option>
+      <option value="05">05</option>
+      <option value="06">06</option>
+      <option value="07">07</option>
+      <option value="08">08</option>
+      <option value="09">09</option>
+      <option value="10">10</option>
+    </select></td>
+    <td width="25%"><strong><input type="text" name="ST2" size="20"></strong></td>
+  </tr>
+  <tr>
+    <td width="25%"><strong>X-Salada</strong></td>
+    <td width="25%"><strong>R$ 10,33</strong></td>
+    <td width="25%" align="right"><select name="QT3" size="1">
+      <option value="00">00</option>
+      <option value="01">01</option>
+      <option value="02">02</option>
+      <option value="03">03</option>
+      <option value="04">04</option>
+      <option value="05">05</option>
+      <option value="06">06</option>
+      <option value="07">07</option>
+      <option value="08">08</option>
+      <option value="09">09</option>
+      <option value="10">10</option>
+    </select></td>
+    <td width="25%"><strong><input type="text" name="ST3" size="20"></strong></td>
+  </tr>
+  <tr>
+    <td width="25%"><strong>X-Egg</strong></td>
+    <td width="25%"><strong>R$ 11,20</strong></td>
+    <td width="25%" align="right"><select name="QT4" size="1">
+      <option value="00">00</option>
+      <option value="01">01</option>
+      <option value="02">02</option>
+      <option value="03">03</option>
+      <option value="04">04</option>
+      <option value="05">05</option>
+      <option value="06">06</option>
+      <option value="07">07</option>
+      <option value="08">08</option>
+      <option value="09">09</option>
+      <option value="10">10</option>
+    </select></td>
+    <td width="25%"><strong><input type="text" name="ST4" size="20"></strong></td>
+  </tr>
+  <tr>
+    <td width="25%"><strong>X-Bacon</strong></td>
+    <td width="25%"><strong>R$ 13,71</strong></td>
+    <td width="25%" align="right"><select name="QT5" size="1">
+      <option value="00">00</option>
+      <option value="01">01</option>
+      <option value="02">02</option>
+      <option value="03">03</option>
+      <option value="04">04</option>
+      <option value="05">05</option>
+      <option value="06">06</option>
+      <option value="07">07</option>
+      <option value="08">08</option>
+      <option value="09">09</option>
+      <option value="10">10</option>
+    </select></td>
+    <td width="25%"><strong><input type="text" name="ST5" size="20"></strong></td>
+  </tr>
+  <tr>
+    <td width="25%"><input type="submit" value="calcula" name="B1" onClick="calcula()">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+    <td width="25%">&nbsp;</td>
+    <td width="25%" align="right">&nbsp;</td>
+    <td width="25%">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="25%"><strong>Total&nbsp; <input type="text" name="total" size="15"></strong></td>
+    <td width="25%">&nbsp;</td>
+    <td width="25%">&nbsp;</td>
+    <td width="25%">&nbsp;</td>
+  </tr>
+</table>
+
+<p>&nbsp;</p>
+</body>
+</html>
